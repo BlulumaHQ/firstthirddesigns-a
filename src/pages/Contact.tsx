@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import SectionHeading from "@/components/SectionHeading";
+import InstagramStrip from "@/components/InstagramStrip";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -12,31 +12,29 @@ const Contact = () => {
 
   return (
     <>
-      {/* Hero */}
-      <section className="hero-bg section-padding">
-        <div className="container mx-auto text-center">
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-xs font-semibold uppercase tracking-[0.25em] text-secondary mb-4 block"
-          >
-            Get In Touch
-          </motion.span>
+      {/* Hero — Full-width image */}
+      <section className="relative min-h-[50vh] flex items-center justify-center">
+        <img
+          src="https://static.showit.co/800/KGeYD_o-a4YbGX-rTqnm3Q/235620/cherrydeck-ovwc3lehrz8-unsplash.jpg"
+          alt="Botanical flowers"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-foreground/40" />
+        <div className="relative z-10 text-center px-6">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
+            className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-white"
           >
-            Click, Stay Awhile
+            Contact First & Third Designs
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="mt-6 text-lg opacity-85 max-w-2xl mx-auto leading-relaxed"
+            transition={{ delay: 0.15 }}
+            className="mt-4 text-sm md:text-base uppercase tracking-[0.15em] text-white/90 font-semibold"
           >
-            We believe in you, now it's your turn. Let's create something beautiful together.
+            This is the part where you reach out… and everything gets easier.
           </motion.p>
         </div>
       </section>
@@ -44,6 +42,9 @@ const Contact = () => {
       {/* Contact Form */}
       <section className="section-padding">
         <div className="container mx-auto max-w-2xl">
+          <h2 className="font-heading text-2xl md:text-3xl font-semibold text-center mb-10">
+            First & Third Designs Inquiry Form
+          </h2>
           {submitted ? (
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -57,64 +58,119 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium mb-2">First Name</label>
+                  <label className="block text-sm font-semibold mb-2">First Name <span className="text-secondary">*</span></label>
                   <input
                     type="text"
                     required
                     className="w-full px-4 py-3 border border-border rounded bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
-                    placeholder="Your first name"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Last Name</label>
+                  <label className="block text-sm font-semibold mb-2">Last Name <span className="text-secondary">*</span></label>
                   <input
                     type="text"
                     required
                     className="w-full px-4 py-3 border border-border rounded bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
-                    placeholder="Your last name"
                   />
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2">Email</label>
+                <label className="block text-sm font-semibold mb-2">Email <span className="text-secondary">*</span></label>
                 <input
                   type="email"
                   required
                   className="w-full px-4 py-3 border border-border rounded bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
-                  placeholder="your@email.com"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2">What are you looking for?</label>
-                <select
+                <label className="block text-sm font-semibold mb-2">Phone Number <span className="text-secondary">*</span></label>
+                <input
+                  type="tel"
+                  required
                   className="w-full px-4 py-3 border border-border rounded bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
-                >
-                  <option value="">Select a service</option>
-                  <option>Branding</option>
-                  <option>Website in a Week</option>
-                  <option>Branding + Website</option>
-                  <option>Brand & Web Design</option>
-                  <option>Not sure yet</option>
-                </select>
+                />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2">Tell us about your project</label>
+                <label className="block text-sm font-semibold mb-2">Instagram/Facebook</label>
+                <input
+                  type="text"
+                  className="w-full px-4 py-3 border border-border rounded bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold mb-2">Do you have a current website? If yes, drop the link below.</label>
+                <input
+                  type="text"
+                  className="w-full px-4 py-3 border border-border rounded bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold mb-2">
+                  Tell us about your business. How you work with people, what you offer, anything you'd like us to know! <span className="text-secondary">*</span>
+                </label>
                 <textarea
                   rows={5}
+                  required
                   className="w-full px-4 py-3 border border-border rounded bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 resize-none"
-                  placeholder="Share your vision, goals, timeline — whatever feels right."
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold mb-3">
+                  Do you have branding (logo, fonts, colors)? <span className="text-secondary">*</span>
+                </label>
+                <div className="space-y-2">
+                  <label className="flex items-center gap-3 cursor-pointer">
+                    <input type="radio" name="branding" value="yes" required className="accent-primary" />
+                    <span className="text-sm">Yes, I already have branding</span>
+                  </label>
+                  <label className="flex items-center gap-3 cursor-pointer">
+                    <input type="radio" name="branding" value="no" className="accent-primary" />
+                    <span className="text-sm">No, I need help with that</span>
+                  </label>
+                </div>
+              </div>
+              <div>
+                <label className="block text-sm font-semibold mb-3">
+                  Do you have branding photos? <span className="text-secondary">*</span>
+                </label>
+                <div className="space-y-2">
+                  <label className="flex items-center gap-3 cursor-pointer">
+                    <input type="radio" name="photos" value="love" required className="accent-primary" />
+                    <span className="text-sm">Yes and I love them!</span>
+                  </label>
+                  <label className="flex items-center gap-3 cursor-pointer">
+                    <input type="radio" name="photos" value="refresh" className="accent-primary" />
+                    <span className="text-sm">Yes but they need a refresh!</span>
+                  </label>
+                  <label className="flex items-center gap-3 cursor-pointer">
+                    <input type="radio" name="photos" value="no" className="accent-primary" />
+                    <span className="text-sm">No, I need help!</span>
+                  </label>
+                </div>
+              </div>
+              <div>
+                <label className="block text-sm font-semibold mb-2">
+                  How did you hear about us? <span className="text-secondary">*</span>
+                </label>
+                <input
+                  type="text"
+                  required
+                  className="w-full px-4 py-3 border border-border rounded bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
                 />
               </div>
               <button
                 type="submit"
-                className="w-full py-4 text-base font-semibold bg-primary text-primary-foreground rounded hover:opacity-90 transition-opacity"
+                className="w-full py-4 text-sm font-semibold bg-primary text-primary-foreground rounded hover:opacity-90 transition-opacity uppercase tracking-[0.15em]"
               >
-                Schedule a Call
+                Submit
               </button>
             </form>
           )}
         </div>
       </section>
+
+      {/* Instagram Strip */}
+      <InstagramStrip />
     </>
   );
 };

@@ -6,11 +6,10 @@ const Footer = () => {
   return (
     <footer className="bg-foreground text-primary-foreground">
       <div className="container mx-auto section-padding">
-        {/* Desktop 5-column grid */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-6">
           {/* Column 1: Brand */}
           <div className="md:col-span-1">
-            <h3 className="font-heading text-xl font-semibold mb-4">First & Third Designs</h3>
+            <h3 className="font-heading text-xl font-semibold mb-4 uppercase tracking-wider">First & Third Designs</h3>
             <p className="text-sm opacity-70 leading-relaxed">
               Two sisters designing for women who are done dimming their light.
             </p>
@@ -41,7 +40,7 @@ const Footer = () => {
             </nav>
           </div>
 
-          {/* Column 5: Contact */}
+          {/* Column 5: Connect */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider mb-4 opacity-80">Connect</h4>
             <p className="text-sm opacity-70 leading-relaxed">
@@ -65,10 +64,6 @@ const Footer = () => {
             Web Design by{" "}
             <a href="https://bluluma.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 underline">
               Bluluma
-            </a>{" "}
-            | Powered by{" "}
-            <a href="https://swiftlift.app" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 underline">
-              SwiftLift
             </a>
           </span>
         </div>
