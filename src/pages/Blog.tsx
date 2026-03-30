@@ -25,7 +25,7 @@ const featuredPost = {
     "The women who build extraordinary businesses aren't the ones who had it all figured out. They're the ones who started before they felt ready. Here's what I learned from watching my clients bet on themselves.",
   category: "Real Talk",
   date: "March 2025",
-  img: "https://static.showit.co/1600/FN2O3CkmJWHjlxWkXJqK-w/235620/pexels-thegiansepillo-2570059.jpg",
+  img: "https://static.showit.co/1600/W2_TQkY3XrZi3Drh3tpe2w/235620/corinne-kutz-omftdpbbfxe-unsplash.jpg",
 };
 
 const blogPosts = [
@@ -59,7 +59,7 @@ const blogPosts = [
       "Most entrepreneurs hide behind their services. But your story? That's what makes people choose you. Let's talk about writing an About page that converts.",
     category: "Smarter Not Harder",
     date: "December 2024",
-    img: "https://static.showit.co/1200/qoQRCZlDT52-XKaLaDEXjQ/235620/pexels-thirdman-7652056.jpg",
+    img: "https://static.showit.co/1200/KGeYD_o-a4YbGX-rTqnm3Q/235620/cherrydeck-ovwc3lehrz8-unsplash.jpg",
   },
   {
     title: "The Sunday Reset That Changed My Business",
@@ -67,7 +67,7 @@ const blogPosts = [
       "I used to dread Mondays. Now I spend 30 minutes on Sundays planning a week that actually excites me. Here's exactly what I do and why it works.",
     category: "Hustle Hotline",
     date: "November 2024",
-    img: "https://static.showit.co/1200/-RsOFHY7hW-uD-SJcZN9Hw/235620/pexels-olly-932401.jpg",
+    img: "https://static.showit.co/1200/kD9N8LsPA5xju58h4vuRQQ/235620/pexels-esranurkalay-13673111.jpg",
   },
   {
     title: "What Nobody Tells You About Your First Year in Business",
@@ -75,7 +75,7 @@ const blogPosts = [
       "It's messy. It's lonely sometimes. And it's the most transformative thing you'll ever do. A love letter to every woman in year one.",
     category: "You Got This",
     date: "October 2024",
-    img: "https://static.showit.co/1200/SsUlhcPRQ9VhT7p_aKSk8g/235620/klover_beauty-40.jpg",
+    img: "https://static.showit.co/1200/MQIJA2ySuQuyAiry9mNTaw/235620/pexels-merilisdayoff-18204711.jpg",
   },
 ];
 
